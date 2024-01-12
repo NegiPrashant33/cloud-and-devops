@@ -1,9 +1,7 @@
 pipeline {
   agent {
     docker {
-      //image 'abhishekf5/maven-abhishek-docker-agent:v1'
-      //image 'maven:3.8-openjdk-17'
-      image 'adoptopenjdk:17-jdk-hotspot-bionic'
+      image 'abhishekf5/maven-abhishek-docker-agent:v1'
       // mount Docker socket to access the host's Docker daemon
       args '--user root -v /var/run/docker.sock:/var/run/docker.sock'
     }
