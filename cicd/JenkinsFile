@@ -53,7 +53,7 @@ pipeline {
     		}
     	}
     }
-    stage {
+    stage("Build and Push Docker image") {
     	steps {
     		script {
     			sh 'cd cicd'
