@@ -31,7 +31,7 @@ pipeline {
     }
     stage('SonarQube Analysis') {
         steps {
-            scripts {
+            script {
                     withSonarQubeEnv(installationName: 'sonarqube-server', credentialsId: 'jenkins-sonarqube-token') {
                         sh 'cd cicd && mvn sonar:sonar'
                     }
