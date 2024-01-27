@@ -29,5 +29,14 @@ pipeline {
             sh 'cd cicd && mvn test'
         }
     }
+    stage('SonarQube Analysis') {
+        steps {
+            scripts {
+                    withSonarQubeEnv(credentialsId: 'jenkins-sonarqube-token' {
+                        sh 'cd cicd && mvn sonar:sonar'
+                    }
+            }
+        }
+    }
   }
 }
