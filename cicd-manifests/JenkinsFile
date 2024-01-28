@@ -38,7 +38,7 @@ pipeline {
                         sh """
                             git config --global user.name "NegiPrashant33"
                             git config --global user.email "prashantnegia@gmail.com"
-                            git add deployment.yaml
+                            git add deployment.yml
                             git commit -m "Updated Deployment Manifest"
                             git push https://github.com/NegiPrashant33/cloud-and-devops HEAD:main
                         """
