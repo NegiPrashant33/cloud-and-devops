@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: spring-boot-app:1.0.0-14
+  name: spring-boot-app:1.0.0-15
   labels:
-    app: spring-boot-app:1.0.0-14
+    app: spring-boot-app:1.0.0-15
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: spring-boot-app:1.0.0-14
+      app: spring-boot-app:1.0.0-15
   template:
     metadata:
       labels:
-        app: spring-boot-app:1.0.0-14
+        app: spring-boot-app:1.0.0-15
     spec:
       containers:
-        - name: spring-boot-app:1.0.0-14
-          image: negiprashant33/spring-boot-app:1.0.0-14
+        - name: spring-boot-app:1.0.0-15
+          image: negiprashant33/spring-boot-app:1.0.0-15
           resources:
             limits:
               memory: "256Mi"
