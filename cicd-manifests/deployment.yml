@@ -17,9 +17,9 @@ spec:
       containers:
         - name: spring-boot-app
           image: negiprashant33/spring-boot-app:1.0.0-10
-      resources:
-        limits:
-          memory: "256Mi"
-          cpu: "500m"
-        ports:
-          - containerPort: 8010
+          resources:
+            limits:
+              memory: "256Mi"
+              cpu: "500m"
+          ports:
+            - containerPort: 8010
